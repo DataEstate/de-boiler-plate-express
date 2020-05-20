@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "express": "~4.16.1",
+    "mongodb": "^3.5.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "superagent": "^5.2.2"
@@ -37,6 +38,7 @@
     "nodemon": "^2.0.2",
     "nps": "^5.9.12",
     "nps-utils": "^1.7.0",
+    "sinon": "^9.0.1",
     "sinon-chai": "^3.5.0",
     "source-map-loader": "^0.2.4",
     "supertest": "^4.0.2",
