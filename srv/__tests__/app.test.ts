@@ -1,13 +1,17 @@
 import app from "../app";
-import * as supertest from "supertest";
+import request from "supertest";
 import { expect } from "chai";
 
 describe("app", () => {
-  let request;
-  beforeEach(() => {
-    request = supertest(app);
-  });
-  it("can return hello world", done => {
-    request.get("/").expect(200, done);
+  it("Can output root path", () => {
+    const stubResponse = {
+      message: "hello world 3",
+    };
+    return request(app)
+      .get("/")
+      .then((res) => {
+        console.log(res.body);
+        expect(res.body.message).to.equal(stubResponse.message);
+      });
   });
 });

@@ -1,5 +1,6 @@
 import express from "express";
-import { Request, Response } from "express";
+import { Request, Response, Router } from "express";
+import { TestRoute } from "./Routes";
 
 const app = express();
 
@@ -10,6 +11,7 @@ app.get("/", (req: Request, res: Response) => {
     message: "hello world 3",
   });
 });
+app.use("/api", TestRoute);
 
 if (require.main === module) {
   // true if file is executed
